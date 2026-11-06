@@ -1,5 +1,21 @@
 [project]
 name = "project"
 version = "0.1.0"
-requires-python = ">=3.14"
-dependencies = []
+requires-python = ">=3.12,<3.13"
+dependencies = [
+    "langchain<1",
+    "langchain-community<0.4",
+    "langchain-chroma",
+    "langchain-huggingface",
+    "langchain-text-splitters",
+    "sentence-transformers",
+    "chromadb",
+    "tree-sitter",
+    "tree-sitter-go",
+    "ragas",
+    "streamlit",
+    "python-dotenv",
+]
+
+[dependency-groups]
+dev = ["pytest"]

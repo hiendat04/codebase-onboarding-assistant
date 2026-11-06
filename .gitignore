@@ -1,1 +1,8 @@
 PLAN.md
+docs/superpowers
+data/
+chroma_db/
+.env
+eval/results/
+.venv/
+__pycache__/
