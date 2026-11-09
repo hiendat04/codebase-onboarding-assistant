@@ -25,3 +25,8 @@ REPOS = {
 SUBSYSTEMS = ["pkg/scheduler", "pkg/kubelet", "staging/src/k8s.io/client-go"]
 
 TOP_K = 8
+
+MAX_CHARS = 6000  # about 1,500 tokens
+OVERLAP_LINES = 5
+DOC_DIRS = ["contributors/devel", "contributors/guide"]  # in the community repo
+CHUNKS_FILE = DATA_DIR / "chunks.jsonl"
