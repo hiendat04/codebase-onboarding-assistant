@@ -1,6 +1,6 @@
 from pathlib import Path
 
-SKIP_DIRS = {"vendor", "third_party", "testdata"}
+SKIP_DIRS = {"vendor", "third_party", "testdata", "applyconfigurations"}  # last one: generated client-go helpers
 
 
 def _excluded(path: Path) -> bool:
