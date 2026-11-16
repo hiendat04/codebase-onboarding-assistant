@@ -60,7 +60,9 @@ def chunk_go(repo: str, path: str, source: bytes) -> list[Chunk]:
 
     for i, node in enumerate(children):
         if node.type not in _DECLS:
-            run.append(node)
+            # a trailing comment on a line already covered by the previous node adds nothing
+            if not (node.type == "comment" and i > 0 and node.start_point.row == children[i - 1].end_point.row):
+                run.append(node)
             continue
         # pull directly preceding comments (on their own lines) into this declaration
         first = i

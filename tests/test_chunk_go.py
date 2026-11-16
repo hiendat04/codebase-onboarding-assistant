@@ -62,3 +62,9 @@ def test_long_function_is_split():
     got = [c for c in chunks(f"package x\n\nfunc Big() {{\n{body}\n}}\n".encode()) if c.symbol == "Big"]
     assert len(got) >= 2
     assert all(len(c.text) <= MAX_CHARS + 100 for c in got)
+
+
+def test_trailing_comment_on_declaration_line_is_not_a_chunk():
+    got = chunks(b"package x\n\ntype A int // note a\ntype B int // note b\n")
+    assert [c.symbol for c in got] == ["<file header>", "A", "B"]
+    assert len({c.id for c in got}) == len(got)
