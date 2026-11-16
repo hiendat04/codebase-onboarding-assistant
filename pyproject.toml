@@ -15,6 +15,7 @@ dependencies = [
     "ragas",
     "streamlit",
     "python-dotenv",
+    "langchain-ollama<1",
 ]
 
 [dependency-groups]

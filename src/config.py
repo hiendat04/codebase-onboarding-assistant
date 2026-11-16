@@ -31,7 +31,10 @@ OVERLAP_LINES = 5
 DOC_DIRS = ["contributors/devel", "contributors/guide"]  # in the community repo
 CHUNKS_FILE = DATA_DIR / "chunks.jsonl"
 
-# indexing (Phase 2)
+
 EMBED_MODEL = "BAAI/bge-small-en-v1.5"  # 384 dims; reads at most 512 tokens per chunk
 QUERY_PREFIX = "Represent this sentence for searching relevant passages: "  # bge wants this on questions only
 COLLECTION = "k8s"
+
+
+LLM_MODEL = "qwen2.5-coder:7b"  # local Ollama model, used for both RAG and baseline
