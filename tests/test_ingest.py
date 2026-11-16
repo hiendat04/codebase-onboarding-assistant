@@ -1,8 +1,8 @@
 import dataclasses
 import json
 
-from src.ingest import save_chunks
-from src.models import Chunk
+from src.ingestion.ingest import save_chunks
+from src.ingestion.models import Chunk
 
 
 def test_save_chunks_roundtrip(tmp_path):

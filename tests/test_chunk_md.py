@@ -1,4 +1,4 @@
-from src.chunk_md import chunk_markdown
+from src.ingestion.chunk_md import chunk_markdown
 
 
 def chunks(text, path="docs/readme.md"):

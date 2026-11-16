@@ -1,6 +1,6 @@
 import sys
 
-from src.store import get_store, search
+from src.retrieval.store import get_store, search
 
 if __name__ == "__main__":
     for doc in search(get_store(), sys.argv[1]):

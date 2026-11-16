@@ -1,7 +1,7 @@
 import tree_sitter_go
 from tree_sitter import Language, Node, Parser
 
-from src.models import Chunk, make_id, split_long
+from src.ingestion.models import Chunk, make_id, split_long
 
 _parser = Parser(Language(tree_sitter_go.language()))
 _DECLS = ("function_declaration", "method_declaration", "type_declaration")

@@ -1,4 +1,4 @@
-from src.files import list_files
+from src.ingestion.files import list_files
 
 
 def test_list_files_applies_excludes(tmp_path):

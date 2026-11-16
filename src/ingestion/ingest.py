@@ -6,10 +6,10 @@ from dataclasses import asdict
 from pathlib import Path
 
 from src import config
-from src.chunk_go import chunk_go
-from src.chunk_md import chunk_markdown
-from src.files import list_files
-from src.models import Chunk
+from src.ingestion.chunk_go import chunk_go
+from src.ingestion.chunk_md import chunk_markdown
+from src.ingestion.files import list_files
+from src.ingestion.models import Chunk
 
 
 def ingest_all() -> list[Chunk]:

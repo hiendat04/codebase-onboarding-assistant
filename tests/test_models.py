@@ -1,5 +1,5 @@
 from src.config import MAX_CHARS, OVERLAP_LINES
-from src.models import make_id, split_long
+from src.ingestion.models import make_id, split_long
 
 
 def test_make_id_is_stable_and_distinct():

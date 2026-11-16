@@ -1,5 +1,5 @@
 from src import config
-from src.llm import get_llm
+from src.generation.llm import get_llm
 
 
 def test_get_llm_uses_config_model():

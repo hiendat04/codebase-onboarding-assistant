@@ -4,8 +4,8 @@ from pathlib import Path
 from langchain_chroma import Chroma
 
 from src import config
-from src.models import Chunk
-from src.store import get_store
+from src.ingestion.models import Chunk
+from src.retrieval.store import get_store
 
 
 def load_chunks(path: Path) -> list[Chunk]:

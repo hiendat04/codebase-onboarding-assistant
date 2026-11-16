@@ -1,4 +1,4 @@
-from src.chunk_go import chunk_go
+from src.ingestion.chunk_go import chunk_go
 from src.config import MAX_CHARS
 
 SAMPLE = b"""package sched

@@ -1,6 +1,6 @@
 from langchain_core.embeddings import DeterministicFakeEmbedding
 
-from src.store import get_store, search
+from src.retrieval.store import get_store, search
 
 fake = DeterministicFakeEmbedding(size=16)
 

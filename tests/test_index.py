@@ -1,9 +1,9 @@
 from langchain_core.embeddings import DeterministicFakeEmbedding
 
-from src.index import index_chunks, load_chunks
-from src.ingest import save_chunks
-from src.models import Chunk
-from src.store import get_store
+from src.retrieval.index import index_chunks, load_chunks
+from src.ingestion.ingest import save_chunks
+from src.ingestion.models import Chunk
+from src.retrieval.store import get_store
 
 
 def make_chunks(n):

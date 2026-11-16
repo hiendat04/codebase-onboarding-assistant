@@ -2,7 +2,7 @@ import subprocess
 
 import pytest
 
-from src.clone import clone_repo
+from src.ingestion.clone import clone_repo
 
 
 @pytest.fixture

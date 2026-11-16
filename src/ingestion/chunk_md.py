@@ -1,6 +1,6 @@
 import re
 
-from src.models import Chunk, make_id, split_long
+from src.ingestion.models import Chunk, make_id, split_long
 
 _HEADING = re.compile(r"^(#{1,6}) +(.*\S)\s*$")
 
