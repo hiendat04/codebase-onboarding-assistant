@@ -10,7 +10,7 @@ dependencies = [
     "langchain-text-splitters",
     "sentence-transformers",
     "chromadb",
-    "tree-sitter",
+    "tree-sitter>=0.26.1",  # 0.26.0 segfaults on repeated parses
     "tree-sitter-go",
     "ragas",
     "streamlit",
