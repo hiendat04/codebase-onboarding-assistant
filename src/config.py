@@ -38,3 +38,5 @@ COLLECTION = "k8s"
 
 
 LLM_MODEL = "qwen2.5-coder:7b"  # local Ollama model, used for both RAG and baseline
+
+RESULTS_DIR = ROOT / "eval" / "results"  # git-ignored
