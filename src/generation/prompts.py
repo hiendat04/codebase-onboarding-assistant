@@ -1,3 +1,4 @@
+import re
 from urllib.parse import quote
 
 from langchain_core.documents import Document
@@ -36,3 +37,11 @@ def permalink(metadata: dict) -> str:
     repo = metadata["repo"]
     return (f"https://github.com/kubernetes/{repo}/blob/{_SHAS[repo]}/{quote(metadata['path'])}"
             f"#L{metadata['start_line']}-L{metadata['end_line']}")
+
+
+def link_citations(answer: str, docs: list[Document]) -> str:
+    """Turn each retrieved chunk's label in the answer into a Markdown link; made-up labels stay plain."""
+    for label, url in {cite(d.metadata): permalink(d.metadata) for d in docs}.items():
+        pattern = rf"[\[`]?(?<![\w/.]){re.escape(label)}(?!\d)[\]`]?"
+        answer = re.sub(pattern, lambda _: f"[{label}]({url})", answer)
+    return answer
