@@ -40,3 +40,4 @@ COLLECTION = "k8s"
 LLM_MODEL = "qwen2.5-coder:7b"  # local Ollama model, used for both RAG and baseline
 
 RESULTS_DIR = ROOT / "eval" / "results"  # git-ignored
+JUDGE_MODEL = "llama3.1:8b"  # RAGAS judge; a different model family so qwen doesn't grade itself
